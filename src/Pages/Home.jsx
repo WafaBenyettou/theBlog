@@ -8,7 +8,7 @@ import Footer from '../Components/Footer'
 
 function Home() {
   return (
-    <div>
+    <div className='p-[20px]'>
         <Header />
         <Search />
         <Post />
