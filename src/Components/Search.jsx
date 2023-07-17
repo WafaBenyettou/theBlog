@@ -52,7 +52,7 @@ function Search() {
             md:rounded-full cursor-pointer md:px-4
             hover:scale-110 hover:border-[1px] 
             border-blue-500 transition-all duration-100 ease-in-out`}>
-            <li className='line-clamp-1'>
+            <li className='line-clamp-1 px-1'>
               {item.name}
             </li>
           </ul>
