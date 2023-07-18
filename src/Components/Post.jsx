@@ -2,19 +2,19 @@ import React from 'react';
 import logo from "../assets/img/logo.png";
 
 function Post({ posts }) {
-  // Extract the first post from the 'posts' array
+ 
   const firstPost = posts.length > 0 ? posts[0] : null;
 
   return (
     <div>
-      {/* Check if the firstPost exists and render its details */}
+
       {firstPost && (
         <div className='grid grid-cols-1 cursor-pointer
         md:grid-cols-2 mt-10 px-10 md:px-15 lg:px-32 gap-8' key={firstPost.id}>
 
           <img src={firstPost.coverImage} className='rounded-2xl object-cover w-full h-full' />
           <div>
-            <h4 className='text-red-500'>{firstPost.tag}</h4>
+            <h4 className='text-blue-500'>{firstPost.tag}</h4>
             <h2 className='text-[23px] font-bold mt-5'>{firstPost.title}</h2>
             <h4 className='line-clamp-6 text-gray-400 mt-5'>{firstPost.desc}</h4>
             <div className='flex items-center mt-5'>
