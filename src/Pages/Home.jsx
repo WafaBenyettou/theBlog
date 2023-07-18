@@ -36,7 +36,7 @@ function Home() {
       <Search />
       {/* Pass the fetched posts as props to the Post component */}
       <Post posts={posts} />
-      <Blogs />
+      <Blogs posts={posts}/>
       <Footer />
     </div>
   );
