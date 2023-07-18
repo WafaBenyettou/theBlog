@@ -2,11 +2,12 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-gray-200 text-center mt-20">
-      <h1 className="text-[14px] p-10">
-        Contacte@theBlog.com<br></br>
-        Copyright © 2023 TheBlog
+    <div className="bg-gray-200 text-center mt-20 p-10">
+      <h1 className="text-[15px] pb-5 ">
+       for more information :  Contacte@theBlog.com
+      
       </h1>
+      <span className="text-blue-500">Copyright © 2023 TheBlog</span>
     </div>
   );
 }
