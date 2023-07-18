@@ -1,23 +1,21 @@
-import React, { useEffect } from 'react';
-import GlobalAPI from '../Services/GlobalAPI';
+import React from 'react';
 
-function Post() {
-  useEffect(() => {
-    getPost();
-  }, []);
-
-  const getPost = () => {
-    GlobalAPI.getPost()
-      .then(resp => {
-        console.log(resp.data.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  };
-
+function Post({ posts }) {
+  
   return (
-    <div>Post</div>
+    <div>
+      {posts.map(post => (
+        <div key={post.id}>
+          <img src={post.coverImage} alt={post.title} />
+         <div>
+          <h4>{post.tag}</h4>
+          <h2>{post.title}</h2>
+          <p>{post.desc}</p>
+          </div>
+      
+        </div>
+      ))}
+    </div>
   );
 }
 
