@@ -46,7 +46,7 @@ function Search() {
       <div className='flex gap-10 justify-center
        mt-5'>
         {tags.map((item,index) => (
-          <ul  className={`${index==activeIndex?
+          <ul key={item.id} className={`${index==activeIndex?
             'bg-blue-500 text-white':null} 
             p-1 pb-2 rounded-sm
             md:rounded-full cursor-pointer md:px-4
