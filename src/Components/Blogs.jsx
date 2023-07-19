@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from "../assets/img/logo.png";
+import { useNavigate } from 'react-router-dom';
 
 function Blogs({ posts }) {
+  const navigate=useNavigate();
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 px-10 md:px-15 lg:px-32 gap-6'>
       {posts.map(post => (
-        <div className='cursor-pointer' key={post.id}>
+        <div className='cursor-pointer' key={post.id} onClick={()=>navigate('blog/'+post.id)}>
           <div>
-            {/* Add a CSS class to the image for consistent dimensions */}
+        
             <img src={post.coverImage} className='rounded-2xl object-cover w-full h-40 md:h-60 lg:h-80' />
           </div>
           <div>
