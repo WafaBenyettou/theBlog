@@ -31,8 +31,8 @@ function Home() {
   };
 
   return (
-    <div className='p-[20px]'>
-      <Header />
+    <div>
+   
       <Search />
       {/* Pass the fetched posts as props to the Post component */}
       <Post posts={posts} />
