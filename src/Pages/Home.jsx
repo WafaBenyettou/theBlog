@@ -30,11 +30,21 @@ function Home() {
       });
   };
 
+  const filterPost=(tag)=>{
+    if(tag=='All')
+    {
+      setPost(orgPost);
+      return ;
+    }
+    const result=orgPost.filter(item=>item.tag==tag);
+    setPost(result);
+  }
+
   return (
     <div>
    
-      <Search />
-      {/* Pass the fetched posts as props to the Post component */}
+      <Search selectedTag={(tag)=>filterPost(tag)}/>
+    
       <Post posts={posts} />
       <Blogs posts={posts}/>
       <Footer />
