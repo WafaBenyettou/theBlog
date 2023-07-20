@@ -8,6 +8,7 @@ import GlobalAPI from '../Services/GlobalAPI';
 
 function Home() {
   const [posts, setPosts] = useState([]);
+  const [orgPost,setOrgPost]=useState([])
 
   useEffect(() => {
     getPosts();
@@ -24,6 +25,7 @@ function Home() {
           coverImage: item.attributes.coverImage.data.attributes.url,
         }));
         setPosts(result);
+        setOrgPost(result);
       })
       .catch(error => {
         console.error(error);
@@ -33,11 +35,11 @@ function Home() {
   const filterPost=(tag)=>{
     if(tag=='All')
     {
-      setPost(orgPost);
+      setPosts(orgPost);
       return ;
     }
     const result=orgPost.filter(item=>item.tag==tag);
-    setPost(result);
+    setPosts(result);
   }
 
   return (
