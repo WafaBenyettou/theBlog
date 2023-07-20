@@ -1,15 +1,17 @@
 import React from "react";
 import logo from "../assets/img/logo.png";
 import { IoLogoYoutube } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate=useNavigate();
   return (
     <div className="flex justify-center">
       <div className="flex justify-between items-center max-w-5xl w-full px-4">
         <img src={logo} alt="logo" className="w-[100px]" />
 
         <ul className="hidden md:flex gap-4 md:gap-14">
-          <li className="hover:font-bold cursor-pointer">Home</li>
+          <li className="hover:font-bold cursor-pointer" onClick={()=>navigate('/')}>Home</li>
           <li className="hover:font-bold cursor-pointer">About</li>
           <li className="hover:font-bold cursor-pointer">Contact</li>
         </ul>
