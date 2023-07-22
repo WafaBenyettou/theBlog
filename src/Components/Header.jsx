@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/img/logo.png";
-import { IoLogoYoutube } from "react-icons/io5";
+import { IoLogoFacebook} from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
@@ -17,7 +17,7 @@ function Header() {
         </ul>
 
         <button className="bg-blue-500 rounded-full text-white flex items-center text-[14px]">
-          Subscribe <IoLogoYoutube className="w-6 h-6 ml-3" />
+          Subscribe <IoLogoFacebook className="w-6 h-6 ml-3" />
         </button>
       </div>
     </div>
