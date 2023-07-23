@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const navigate=useNavigate();
   return (
-    <div className="flex justify-center">
+    <div className=" bg-gray-200 rounded-2xl flex justify-center">
       <div className="flex justify-between items-center max-w-5xl w-full px-4">
         <img src={logo} alt="logo" className="w-[100px]" />
 
