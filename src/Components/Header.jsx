@@ -12,7 +12,7 @@ function Header() {
 
         <ul className="hidden md:flex gap-4 md:gap-14">
           <li className="hover:font-bold cursor-pointer" onClick={()=>navigate('/')}>Home</li>
-          <li className="hover:font-bold cursor-pointer">About</li>
+          <li className="hover:font-bold cursor-pointer" onClick={()=>navigate('/About')}>About</li>
           <li className="hover:font-bold cursor-pointer">Contact</li>
         </ul>
 
