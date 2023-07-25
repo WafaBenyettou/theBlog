@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaHeart, FaUsers } from 'react-icons/fa';
 import banner from '../assets/img/banner.png';
 
 const Testimonial = ({ author, text }) => {
@@ -46,22 +47,18 @@ const About = () => {
       </p>
       <div className="mt-6">
         <div className="flex items-center">
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mr-4"
-            onClick={handleFollow}
-          >
-            Follow
-          </button>
-          <span className="text-lg font-semibold text-gray-800">Followers: {followers}</span>
+         
+          <span className="text-lg font-semibold text-gray-800 flex items-center">
+            <FaUsers className="inline-block mr-2" />
+            {followers} Followers
+          </span>
         </div>
         <div className="flex items-center mt-4">
-          <button
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md mr-4"
-            onClick={handleLike}
-          >
-            Like
-          </button>
-          <span className="text-lg font-semibold text-gray-800">Likes: {likes}</span>
+          
+          <span className="text-lg font-semibold text-gray-800 flex items-center">
+            <FaHeart className="inline-block mr-2" />
+            {likes} Likes
+          </span>
         </div>
       </div>
       <div className="mt-8">
