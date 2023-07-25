@@ -1,4 +1,14 @@
 import React, { useState } from 'react';
+import banner from '../assets/img/banner.png';
+
+const Testimonial = ({ author, text }) => {
+  return (
+    <div className="bg-gray-100 p-4 rounded-md shadow-md">
+      <p className="text-lg text-gray-800">{text}</p>
+      <p className="text-sm mt-2 text-gray-600">- {author}</p>
+    </div>
+  );
+};
 
 const About = () => {
   const [followers, setFollowers] = useState(5000);
@@ -15,6 +25,11 @@ const About = () => {
   return (
     <div className="bg-white p-8 shadow-md rounded-lg max-w-xl mx-auto">
       <h2 className="text-3xl font-bold mb-4">About Us</h2>
+      <img
+        src={banner}
+        alt="Company Logo"
+        className="rounded-2xl object-cover w-full h-40 md:h-60 lg:h-80 mb-10"
+      />
       <p className="text-lg text-gray-800">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum. Vivamus
         ut justo justo. Sed sed velit nec purus feugiat ullamcorper vitae id mauris. Duis ultrices
@@ -48,6 +63,17 @@ const About = () => {
           </button>
           <span className="text-lg font-semibold text-gray-800">Likes: {likes}</span>
         </div>
+      </div>
+      <div className="mt-8">
+        <h3 className="text-xl font-bold mb-4">Testimonials</h3>
+        <Testimonial
+          author="John Doe"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
+        />
+        <Testimonial
+          author="Jane Smith"
+          text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
+        />
       </div>
     </div>
   );
