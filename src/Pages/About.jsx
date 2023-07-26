@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaHeart, FaUsers } from 'react-icons/fa';
 import banner from '../assets/img/banner.png';
 
-
 const Testimonial = ({ author, text }) => {
   return (
     <div className="bg-gray-500 p-4 mb-5 rounded-md shadow-md">
@@ -12,16 +11,13 @@ const Testimonial = ({ author, text }) => {
   );
 };
 
-
 const About = () => {
   const [followers, setFollowers] = useState(5000);
   const [likes, setLikes] = useState(10000);
 
-  
   const handleFollow = () => {
     setFollowers((prevFollowers) => prevFollowers + 1);
   };
-
 
   const handleLike = () => {
     setLikes((prevLikes) => prevLikes + 1);
@@ -51,14 +47,11 @@ const About = () => {
       </p>
       <div className="mt-6">
         <div className="flex items-center">
-         
-          <span className="text-lg font-semibold text-gray-800 flex items-center">
+          {/* Display both followers and likes in one row */}
+          <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
             <FaUsers className="inline-block mr-2" />
             {followers} Followers
           </span>
-        </div>
-        <div className="flex items-center mt-4">
-      
           <span className="text-lg font-semibold text-gray-800 flex items-center">
             <FaHeart className="inline-block mr-2" />
             {likes} Likes
@@ -67,7 +60,6 @@ const About = () => {
       </div>
       <div className="mt-8">
         <h3 className="text-xl font-bold mb-4">Testimonials</h3>
-        
         <Testimonial
           author="John Doe"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
