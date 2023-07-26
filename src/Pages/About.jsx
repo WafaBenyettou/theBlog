@@ -24,8 +24,8 @@ const About = () => {
   };
 
   return (
-    <div className="bg-white p-8 shadow-md rounded-lg max-w-xl mx-auto">
-      <h2 className="text-3xl font-bold mb-4">About Us</h2>
+    <div className="mt-5 max-w-xl mx-auto">
+      <h2 className="text-4xl font-bold mb-10">About Us</h2>
       <img
         src={banner}
         alt="Company Logo"
@@ -46,6 +46,7 @@ const About = () => {
         amet ut odio. Nam rhoncus tellus vel metus euismod, ac vestibulum elit dapibus.
       </p>
       <div className="mt-6">
+        <h3 className="text-xl font-bold mb-4"></h3>
         <div className="flex items-center">
        
           <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
