@@ -67,6 +67,7 @@ const About = () => {
       <div className="mt-8">
         <h3 className="text-xl font-bold mb-4">Testimonials</h3>
         <Testimonial
+          image={banner}
           author="John Doe"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
         />
