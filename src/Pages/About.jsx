@@ -6,7 +6,7 @@ const Testimonial = ({ author, text, image }) => {
   return (
     <div className="bg-gray-500 p-4 mb-5 rounded-md shadow-md">
        <img
-        src=""
+        src={image || 'https://via.placeholder.com/50'}
         alt="avatar"
         className="rounded-full w-12 h-12 mr-4"
       />
