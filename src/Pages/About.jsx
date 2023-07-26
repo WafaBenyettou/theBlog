@@ -47,7 +47,7 @@ const About = () => {
       </p>
       <div className="mt-6">
         <div className="flex items-center">
-          {/* Display both followers and likes in one row */}
+       
           <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
             <FaUsers className="inline-block mr-2" />
             {followers} Followers
