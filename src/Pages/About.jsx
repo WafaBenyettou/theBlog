@@ -5,6 +5,11 @@ import banner from '../assets/img/banner.png';
 const Testimonial = ({ author, text }) => {
   return (
     <div className="bg-gray-500 p-4 mb-5 rounded-md shadow-md">
+       <img
+        src=""
+        alt="avatar"
+        className="rounded-full w-12 h-12 mr-4"
+      />
       <p className="text-lg text-gray-100">{text}</p>
       <p className="text-sm mt-2 text-gray-100">- {author}</p>
     </div>
@@ -46,7 +51,7 @@ const About = () => {
         amet ut odio. Nam rhoncus tellus vel metus euismod, ac vestibulum elit dapibus.
       </p>
       <div className="mt-6">
-        <h3 className="text-xl font-bold mb-4"></h3>
+        <h3 className="text-xl font-bold mb-4">Statistics</h3>
         <div className="flex items-center">
        
           <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
