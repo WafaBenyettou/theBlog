@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaHeart, FaUsers } from 'react-icons/fa';
 import banner from '../assets/img/banner.png';
 
-const Testimonial = ({ author, text }) => {
+const Testimonial = ({ author, text, image }) => {
   return (
     <div className="bg-gray-500 p-4 mb-5 rounded-md shadow-md">
        <img
