@@ -5,8 +5,8 @@ import { FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa';
 const Contact= () => {
   return (
     <div className=" from-blue-500 via-purple-500 to-pink-500 min-h-screen p-8">
-      <div className=" bg-gradient-to-br max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-3xl font-bold text-center text-white mb-6">Contact Us</h1>
+      <div className=" max-w-md mx-auto bg-gray-100 p-8 rounded-lg border border-gray-300 shadow-lg">
+        <h1 className="text-3xl font-bold text-center text-black mb-6">Contact Us</h1>
         <form className="space-y-4">
           <div>
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
