@@ -53,18 +53,18 @@ function Contact() {
             </button>
           </div>
         </form>
-        <div className="mt-8">
+        <div className="flex items-center mt-8">
           <span className="text-gray-500 mr-4">Follow us:</span>
-          <a href="#" className="text-blue-600 hover:text-blue-800">
-            <FaFacebookSquare className="text-2xl mx-2" />
+          <a href="#" className="text-blue-600 hover:text-blue-800 ml-2">
+            <FaFacebookSquare className="text-2xl" />
           </a>
-          <a href="#" className="text-blue-400 hover:text-blue-600">
-            <FaTwitterSquare className="text-2xl mx-2" />
+          <a href="#" className="text-blue-400 hover:text-blue-600 ml-2">
+            <FaTwitterSquare className="text-2xl" />
           </a>
-          <a href="#" className="text-red-600 hover:text-red-800">
-            <FaYoutubeSquare className="text-2xl mx-2" />
+          <a href="#" className="text-red-600 hover:text-red-800 ml-2">
+            <FaYoutubeSquare className="text-2xl" />
           </a>
-          {/* Add more social media links here */}
+        
         </div>
       </div>
     </div>
