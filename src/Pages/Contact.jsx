@@ -1,19 +1,19 @@
-import React from 'react'
-import { FaFacebookSquare, FaTwitterSquare, FaYoutubeSquare } from 'react-icons/fa';
+// src/App.js
+import React from 'react';
+import { FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa';
 
-
-function Contact() {
+const Contact= () => {
   return (
-    <div className=" min-h-screen p-8">
-      <div className="max-w-3xl mx-auto bg-gray-200 p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl font-semibold mb-4">Contact Us</h1>
+    <div className=" from-blue-500 via-purple-500 to-pink-500 min-h-screen p-8">
+      <div className=" bg-gradient-to-br max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h1 className="text-3xl font-bold text-center text-white mb-6">Contact Us</h1>
         <form className="space-y-4">
           <div>
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
               Name:
             </label>
             <input
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:bg-white"
               type="text"
               id="name"
               name="name"
@@ -25,7 +25,7 @@ function Contact() {
               Email:
             </label>
             <input
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:bg-white"
               type="email"
               id="email"
               name="email"
@@ -37,7 +37,7 @@ function Contact() {
               Message:
             </label>
             <textarea
-              className="w-full px-4 py-2 border rounded-lg resize-none focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 bg-gray-200 rounded-lg resize-none focus:outline-none focus:bg-white"
               id="message"
               name="message"
               rows="6"
@@ -46,30 +46,28 @@ function Contact() {
           </div>
           <div>
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full focus:outline-none"
               type="submit"
             >
               Send
             </button>
           </div>
         </form>
-        <div className="flex items-center mt-8">
-          <span className="text-gray-500 mr-4">Follow us:</span>
-          <a href="#" className="text-blue-600 hover:text-blue-800 ml-2">
-            <FaFacebookSquare className="text-2xl" />
+        <div className="mt-8 flex justify-center">
+          <a href="#" className="text-blue-400 hover:text-blue-600 mx-4">
+            <FaFacebook className="text-4xl" />
           </a>
-          <a href="#" className="text-blue-400 hover:text-blue-600 ml-2">
-            <FaTwitterSquare className="text-2xl" />
+          <a href="#" className="text-blue-300 hover:text-blue-500 mx-4">
+            <FaTwitter className="text-4xl" />
           </a>
-          <a href="#" className="text-red-600 hover:text-red-800 ml-2">
-            <FaYoutubeSquare className="text-2xl" />
+          <a href="#" className="text-red-400 hover:text-red-600 mx-4">
+            <FaYoutube className="text-4xl" />
           </a>
-        
+          {/* Add more social media links here */}
         </div>
       </div>
     </div>
   );
 };
 
-
-export default Contact
+export default Contact;
