@@ -1,9 +1,11 @@
 import React from 'react'
+import { FaFacebookSquare, FaTwitterSquare, FaYoutubeSquare } from 'react-icons/fa';
+
 
 function Contact() {
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <div className=" min-h-screen p-8">
+      <div className="max-w-3xl mx-auto bg-gray-200 p-8 rounded-lg shadow-md">
         <h1 className="text-2xl font-semibold mb-4">Contact Us</h1>
         <form className="space-y-4">
           <div>
@@ -51,6 +53,19 @@ function Contact() {
             </button>
           </div>
         </form>
+        <div className="mt-8">
+          <span className="text-gray-500 mr-4">Follow us:</span>
+          <a href="#" className="text-blue-600 hover:text-blue-800">
+            <FaFacebookSquare className="text-2xl mx-2" />
+          </a>
+          <a href="#" className="text-blue-400 hover:text-blue-600">
+            <FaTwitterSquare className="text-2xl mx-2" />
+          </a>
+          <a href="#" className="text-red-600 hover:text-red-800">
+            <FaYoutubeSquare className="text-2xl mx-2" />
+          </a>
+          {/* Add more social media links here */}
+        </div>
       </div>
     </div>
   );
