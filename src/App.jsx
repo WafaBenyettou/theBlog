@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import BlogDetails from "./Pages/BlogDetails";
 import Header from "./Components/Header";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
         <Route path="/blog/:id" element={<BlogDetails />}></Route>
         <Route path="/About" element={<About />}></Route>
+        <Route path="/Contact" element={<Contact/>}></Route>
         <Route path="*" element={<h1>404 Not Found</h1>}></Route>
       </Routes>
       </div>
