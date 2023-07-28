@@ -56,6 +56,8 @@ const About = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    prevArrow: <FaArrowLeft className="text-2xl text-gray-400 absolute left-0" />,
+    nextArrow: <FaArrowRight className="text-2xl text-gray-400 absolute right-0" />,
   };
 
   return (
