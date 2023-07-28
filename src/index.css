@@ -83,3 +83,22 @@ button:focus-visible {
   animation-name: fadeIn;
   animation-duration: 1s; 
 }
+
+
+.testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
