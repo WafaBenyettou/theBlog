@@ -38,7 +38,7 @@ const About = () => {
       author: "John Doe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum.",
       date: "July 28, 2023",
-      image: "https://via.placeholder.com/50", // Replace with actual image URL
+      image: "https://via.placeholder.com/50", 
     },
     {
       id: 2,
