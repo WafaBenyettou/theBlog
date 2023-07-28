@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { FaHeart, FaUsers } from 'react-icons/fa';
+import { FaHeart, FaUsers, FaQuoteRight } from 'react-icons/fa';
 import banner from '../assets/img/banner.png';
 
-const Testimonial = ({ author, text, image }) => {
+const Testimonial = ({ author, text, image, date }) => {
   return (
     <div className="bg-gray-100 p-4 mb-5 rounded-md shadow-md">
       <div className="flex items-center mb-3">
@@ -11,9 +11,15 @@ const Testimonial = ({ author, text, image }) => {
           alt="avatar"
           className="rounded-full w-12 h-12 mr-4"
         />
-        <p className="text-lg text-gray-800">{text}</p>
+        <div>
+          <p className="text-lg text-gray-800">{text}</p>
+          <p className="text-sm text-gray-600">- {author}</p>
+          {date && <p className="text-sm text-gray-600">{date}</p>}
+        </div>
       </div>
-      <p className="text-sm text-gray-600">- {author}</p>
+      <div className="flex items-end justify-end">
+        <FaQuoteRight className="text-2xl text-gray-400" />
+      </div>
     </div>
   );
 };
@@ -51,11 +57,13 @@ const About = () => {
           image="https://via.placeholder.com/50" // Replace with actual image URL
           author="John Doe"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
+          date="July 28, 2023" // Replace with actual date
         />
         <Testimonial
           image="https://via.placeholder.com/50" // Replace with actual image URL
           author="Jane Smith"
           text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
+          date="July 29, 2023" // Replace with actual date
         />
       </section>
 
