@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { FaHeart, FaUsers, FaQuoteRight } from 'react-icons/fa';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import banner from '../assets/img/banner.png';
 
 const Testimonial = ({ author, text, image, date }) => {
   return (
-    <div className="bg-gray-100 p-4 mb-5 rounded-md shadow-md">
+    <div className="bg-gray-100 p-4 rounded-md shadow-md">
       <div className="flex items-center mb-3">
         <img
           src={image || 'https://via.placeholder.com/50'}
@@ -27,6 +30,33 @@ const Testimonial = ({ author, text, image, date }) => {
 const About = () => {
   const [followers, setFollowers] = useState(5000);
   const [likes, setLikes] = useState(10000);
+
+  // Testimonial data for the carousel
+  const testimonials = [
+    {
+      id: 1,
+      author: "John Doe",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum.",
+      date: "July 28, 2023",
+      image: "https://via.placeholder.com/50", // Replace with actual image URL
+    },
+    {
+      id: 2,
+      author: "Jane Smith",
+      text: "Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis.",
+      date: "July 29, 2023",
+      image: "https://via.placeholder.com/50", // Replace with actual image URL
+    },
+    // Add more testimonial objects as needed
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <div className="mt-5 max-w-3xl mx-auto">
@@ -53,18 +83,17 @@ const About = () => {
 
       <section className="mt-8">
         <h3 className="text-xl font-bold mb-4">Testimonials</h3>
-        <Testimonial
-          image="https://via.placeholder.com/50" // Replace with actual image URL
-          author="John Doe"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
-          date="July 28, 2023" // Replace with actual date
-        />
-        <Testimonial
-          image="https://via.placeholder.com/50" // Replace with actual image URL
-          author="Jane Smith"
-          text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
-          date="July 29, 2023" // Replace with actual date
-        />
+        <Slider {...settings}>
+          {testimonials.map((testimonial) => (
+            <Testimonial
+              key={testimonial.id}
+              author={testimonial.author}
+              text={testimonial.text}
+              date={testimonial.date}
+              image={testimonial.image}
+            />
+          ))}
+        </Slider>
       </section>
 
       <section className="mt-8 p-6 bg-gray-200 rounded-md shadow-md">
