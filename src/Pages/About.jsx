@@ -45,9 +45,9 @@ const About = () => {
       author: "Jane Smith",
       text: "Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis.",
       date: "July 29, 2023",
-      image: "https://via.placeholder.com/50", // Replace with actual image URL
+      image: "https://via.placeholder.com/50", 
     },
-    // Add more testimonial objects as needed
+
   ];
 
   const settings = {
