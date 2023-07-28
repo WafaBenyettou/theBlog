@@ -20,14 +20,6 @@ const About = () => {
   const [followers, setFollowers] = useState(5000);
   const [likes, setLikes] = useState(10000);
 
-  const handleFollow = () => {
-    setFollowers((prevFollowers) => prevFollowers + 1);
-  };
-
-  const handleLike = () => {
-    setLikes((prevLikes) => prevLikes + 1);
-  };
-
   return (
     <div className="mt-5 max-w-xl mx-auto">
       <h2 className="text-4xl font-bold mb-10">About Us</h2>
@@ -50,33 +42,7 @@ const About = () => {
         Proin dapibus neque et fermentum porttitor. Sed quis dui a mauris aliquet fringilla sit
         amet ut odio. Nam rhoncus tellus vel metus euismod, ac vestibulum elit dapibus.
       </p>
-      <div className="mt-6">
-        <h3 className="text-xl font-bold mb-4">Statistics</h3>
-        <div className="flex items-center">
-          <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
-            <FaUsers className="inline-block mr-2" />
-            {followers} Followers
-          </span>
-          <span className="text-lg font-semibold text-gray-800 flex items-center">
-            <FaHeart className="inline-block mr-2" />
-            {likes} Likes
-          </span>
-        </div>
-        <div className="mt-4">
-          <button
-            onClick={handleFollow}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >
-            Follow
-          </button>
-          <button
-            onClick={handleLike}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg ml-4"
-          >
-            Like
-          </button>
-        </div>
-      </div>
+      
       <div className="mt-8">
         <h3 className="text-xl font-bold mb-4">Testimonials</h3>
         <Testimonial
@@ -90,6 +56,20 @@ const About = () => {
           text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
         />
       </div>
+
+      <section className="mt-8">
+        <h3 className="text-xl font-bold mb-4">Statistics</h3>
+        <div className="flex items-center">
+          <span className="text-lg font-semibold text-gray-800 flex items-center mr-4">
+            <FaUsers className="inline-block mr-2" />
+            {followers} Followers
+          </span>
+          <span className="text-lg font-semibold text-gray-800 flex items-center">
+            <FaHeart className="inline-block mr-2" />
+            {likes} Likes
+          </span>
+        </div>
+      </section>
     </div>
   );
 };
