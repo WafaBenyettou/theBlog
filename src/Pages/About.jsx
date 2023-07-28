@@ -42,20 +42,6 @@ const About = () => {
         Proin dapibus neque et fermentum porttitor. Sed quis dui a mauris aliquet fringilla sit
         amet ut odio. Nam rhoncus tellus vel metus euismod, ac vestibulum elit dapibus.
       </p>
-      
-      <div className="mt-8">
-        <h3 className="text-xl font-bold mb-4">Testimonials</h3>
-        <Testimonial
-          image="https://via.placeholder.com/50" // Replace with actual image URL
-          author="John Doe"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
-        />
-        <Testimonial
-          image="https://via.placeholder.com/50" // Replace with actual image URL
-          author="Jane Smith"
-          text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
-        />
-      </div>
 
       <section className="mt-8">
         <h3 className="text-xl font-bold mb-4">Statistics</h3>
@@ -69,6 +55,20 @@ const About = () => {
             {likes} Likes
           </span>
         </div>
+      </section>
+
+      <section className="mt-8">
+        <h3 className="text-xl font-bold mb-4">Testimonials</h3>
+        <Testimonial
+          image="https://via.placeholder.com/50" // Replace with actual image URL
+          author="John Doe"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget suscipit ipsum."
+        />
+        <Testimonial
+          image="https://via.placeholder.com/50" // Replace with actual image URL
+          author="Jane Smith"
+          text="Phasellus eu tortor et elit euismod porta. Integer luctus vitae odio et venenatis."
+        />
       </section>
     </div>
   );
