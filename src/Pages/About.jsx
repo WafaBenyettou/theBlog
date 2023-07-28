@@ -31,7 +31,7 @@ const About = () => {
   const [followers, setFollowers] = useState(5000);
   const [likes, setLikes] = useState(10000);
 
-  // Testimonial data for the carousel
+
   const testimonials = [
     {
       id: 1,
