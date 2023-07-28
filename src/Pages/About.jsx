@@ -96,7 +96,7 @@ const About = () => {
         </Slider>
       </section>
 
-      <section className="mt-8 p-6 bg-gray-200 rounded-md shadow-md">
+      <section className="mt-8 p-6 bg-gray-100 rounded-md shadow-md">
         <h3 className="text-xl font-bold mb-4">Statistics</h3>
         <div className="flex items-center space-x-6">
           <div className="flex items-center">
