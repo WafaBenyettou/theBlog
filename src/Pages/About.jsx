@@ -48,14 +48,26 @@ const About = () => {
     },
   ];
 
+  const CustomPrevArrow = ({ onClick }) => (
+    <div className="testimonial-arrow prev-arrow" onClick={onClick}>
+      &lt;
+    </div>
+  );
+  
+  const CustomNextArrow = ({ onClick }) => (
+    <div className="testimonial-arrow next-arrow" onClick={onClick}>
+      &gt;
+    </div>
+  );
+  
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <FaArrowLeft className="testimonial-arrow prev-arrow" />,
-    nextArrow: <FaArrowRight className="testimonial-arrow next-arrow" />,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   return (
