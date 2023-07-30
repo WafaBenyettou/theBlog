@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { FaHeart, FaUsers, FaQuoteRight, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Slider from 'react-slick';
 import banner from '../assets/img/banner.png';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const Testimonial = ({ author, text, image, date }) => {
+const Testimonial = ({ author = 'Anonymous', text = '', image = 'https://via.placeholder.com/50', date }) => {
   return (
     <div className="bg-gray-100 p-4 rounded-md shadow-md">
       <div className="flex items-center mb-3">
         <img
-          src={image || 'https://via.placeholder.com/50'}
+          src={image}
           alt="avatar"
           className="rounded-full w-12 h-12 mr-4"
         />
@@ -29,7 +31,6 @@ const About = () => {
   const [followers, setFollowers] = useState(5000);
   const [likes, setLikes] = useState(10000);
 
-
   const testimonials = [
     {
       id: 1,
@@ -45,7 +46,6 @@ const About = () => {
       date: "July 29, 2023",
       image: "https://via.placeholder.com/50", 
     },
-
   ];
 
   const settings = {
