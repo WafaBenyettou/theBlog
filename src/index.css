@@ -93,6 +93,19 @@ button:focus-visible {
   cursor: pointer;
   font-size: 1.5rem;
   z-index: 1;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  transition: background-color 0.3s;
+}
+
+.testimonial-arrow:hover {
+  background-color: #999;
 }
 
 .prev-arrow {
